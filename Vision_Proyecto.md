@@ -19,8 +19,10 @@ podria consistir en la detección o inspección.
   un ejemplo de esta aplicación podría utilizarse en la industría para saber si las piezas u objetos 
   de una máquina presenta algun defecto. Un ejemplo de esto podría ser aplicado en las botellas de vidrio. 
 
-http://www.jasvisio.com/aplicaciones/aplicaciones-de-la-vision-por-computador.html
+                  http://www.jasvisio.com/aplicaciones/aplicaciones-de-la-vision-por-computador.html
 
+
+---------------------------------------------------------------------------------------------------------------
 
 3. Inspección y clasificación de alimentos: 
   El estudio de los alimentos ha tenido mucho interés y puede reflejar el progreso de la tecnología de visión 
