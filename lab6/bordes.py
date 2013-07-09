@@ -180,8 +180,8 @@ def main():
     		
 	
 	imagen_f,g_x,g_y,minimo,maximo,borde,tomap=imagen(argv[1])
-	er,tomap=borde_del(imagen_f,tomap)
-	image=borde_gr(er,tomap)
+	erosion,tomap=borde_del(imagen_f,tomap)
+	image=borde_gr(erosion,tomap)
     		
 
 if __name__ == "__main__":
