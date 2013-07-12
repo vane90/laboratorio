@@ -244,7 +244,7 @@ def mumbra(imagen):
 			c = prom
 			pixels[i,j]=(a,b,c)  ##asiganmos
 	im.save(numbra)                     ##guardamos 
-	return     ##regresemos la imagen cargada
+	return     
 
 
 def normalizacion(imagen,d):
