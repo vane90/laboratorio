@@ -53,26 +53,26 @@ def bordes(imagen):
                 cola.pop(tam-1) ##borramos de la cola
                 try:
                         if pixels[b,a+1][0] == pixels[b,a][0] and visitados[a][b+1] == 0:
-				#print "llego a pasar por aqui chngado"
+				
                                 cola.append((a,b+1))
                 except:
 			pass
 		try:
                         if pixels[b,a-1][0] == pixels[b,a][0] and visitados[a][b-1] == 0:
-				#print "llego a pasar por aqui chngado"
+				
                                 cola.append((a,b-1))
 		except:
                         pass
                 try:
                         if pixels[b+1,a][0] == pixels[b,a][0] and visitados[a+1][b] == 0:
-				                        #print "llego a pasar por aqui chngado"
+				                        
                                 cola.append((a+1,b))
 
                 except:
                         pass
                 try:
                         if pixels[b-1,a][0] == pixels[b,a][0] and visitados[a-1][b] == 0:
-                               # print "llego a pasar por aqui chngado"         
+                                       
 				cola.append((a-1,b))
                 except:
 			pass
@@ -130,7 +130,7 @@ def proceso(mx,mex,my,mey,cord):
 	
 	return puntos
 
-def bfsss(j,i):
+def bfs(j,i):
 	ancho,altura,pixels,im = cargar(nconvolucion)
 	pro = []
 	pro.append((j,i))
@@ -438,8 +438,7 @@ def formas(imagen,gx,gy,cord):
 		cont += 1
 		cordenadas.append((x,y))
 		tras[kk].append((x,y))
-		#yep += 1
-		#kk += 1		
+				
 		if len(pro) == 0:
 			kk = kk + 1
 			cont = 0
@@ -469,7 +468,7 @@ def formas(imagen,gx,gy,cord):
 			lines = []
 			
 			for j in range (len(tras[i])):
-				yep += 1 ## eso es para le porcentaje 
+				yep += 1  
 				x,y = tras[i][j]
 				cosa.append((x,y))
 				if menorx > x:
@@ -494,7 +493,7 @@ def formas(imagen,gx,gy,cord):
 				for k in range (-10,11):
 					pixels[mediox+k,medioy+j] = (255,255,0)
 
-	##aqui calculamos centro de enmedio		
+			
 	menorx,menory = cosa[0]
 	mayorx,mayory = cosa[len(cosa)-1]	
 	for i in range(len(cosa)):
@@ -538,13 +537,13 @@ def formas(imagen,gx,gy,cord):
 		draw.line(lines, fill=100)
 	
 	porcentaje = int(float(yep*100)/float(len(cord)))
-	print "porcentaje hacer figura: ",porcentaje
+	#print "porcentaje hacer figura: ",porcentaje
 	fuente = ImageFont.truetype('/usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-C.ttf',20)
 	draw.text((mediox,medioy), 'L', fill =(0,255,0), font=fuente)
 	
 	im.save(imagen)
 	
-	print "termino"
+	#print "termino"
 	return 
 	
 ##funcion principla del programa
@@ -555,8 +554,8 @@ def main(nombreI):
 	gx,gy,mxy = convolucion(nfiltro)
 	imagen = normalizacion(nconvolucion,mxy)
 	imagen = comprobacion(nconvolucion,gx,gy)
-	imagen = filtro(ngrises) ##lo mismo que arriba pero para filtro						
-	imagen = formas(nconvolucion,gx,gy,mxy)
+	#imagen = filtro(ngrises) ##lo mismo que arriba pero para filtro						
+	#imagen = formas(nconvolucion,gx,gy,mxy)
 	imagen = mumbra(nombreI) ##llama al metodo umbral
 
 
